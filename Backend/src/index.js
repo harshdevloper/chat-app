@@ -26,9 +26,9 @@ app.use(
   })
 );
 
-app.use("/api/auth", authRoutes);
-app.use("/api/messages", messageRoutes);
-app.use("/api/groups", groupRoutes);
+app.use("/auth", authRoutes);
+app.use("/messages", messageRoutes);
+app.use("/groups", groupRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Frontend/dist")));
